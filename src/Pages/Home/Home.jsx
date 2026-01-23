@@ -22,7 +22,6 @@ export default function Home() {
           playsInline
         />
 
-
         <div className="absolute inset-0 bg-black/50"></div>
 
         <motion.div
@@ -32,23 +31,23 @@ export default function Home() {
           className="relative z-10 text-center px-6 text-white flex flex-col items-center justify-center min-h-screen"
         >
           <h1 className="text-5xl font-extrabold mb-4">
-            Book Luxury Hotels
+            Book Luxury Palace
           </h1>
           <p className="text-lg mb-8">
-            Best prices • Best locations • Best comfort
+            • Book Luxury • Feel Luxury
           </p>
 
           <Link
             to="/signup"
             className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
-            Book Now
+            Book it!!
           </Link>
         </motion.div>
       </section>
 
-      {/* SEARCH SECTION */}
-      <section className="bg-white py-12">
+      {/*------------------------------------------------------SEARCH SECTION---------------------------------------------------------------- */}
+      <section className="bg-white py-122">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -64,35 +63,71 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* FEATURED HOTELS */}
+      {/*------------------------------------------------FEATURED HOTELS --------------------------------------------------------*/}
       <section className="py-16 bg-gray-50">
         <h2 className="text-3xl font-bold text-center mb-10">
-          Featured Hotels
+          Featured Palace
         </h2>
+        <div className="flex gap-6 justify-center mt-10">
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-          {["Luxury Palace", "Ocean View", "City Lights"].map((hotel, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden"
-            >
-              <div className="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold">{hotel}</h3>
-                <p className="text-gray-600 mt-2">
-                  Starting from ₹4999 / night
-                </p>
-                <button className="mt-4 text-pink-600 font-semibold">
-                  View Details →
-                </button>
-              </div>
-            </motion.div>
-          ))}
+          {/* CARD 1 */}
+          <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
+                  hover:scale-105 hover:shadow-2xl transition duration-300">
+            <img
+              src="src/assets/h1.jpg"
+              alt="Hotel 1"
+              className="w-full h-44 object-cover"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold">Sea View Resort</h2>
+              <p className="text-gray-600">Goa</p>
+              <p className="text-indigo-600 font-semibold mt-2">
+                ₹4500 / Night
+              </p>
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
+                  hover:scale-105 hover:shadow-2xl transition duration-300">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+              alt="Hotel 2"
+              className="w-full h-44 object-cover"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold">Mountain Palace</h2>
+              <p className="text-gray-600">Manali</p>
+              <p className="text-indigo-600 font-semibold mt-2">
+                ₹3800 / night
+              </p>
+            </div>
+          </div>
+
+          {/* CARD 3 */}
+          <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
+                  hover:scale-105 hover:shadow-2xl transition duration-300">
+            <img
+              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+              alt="Hotel 3"
+              className="w-full h-44 object-cover"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold">City Grand Hotel</h2>
+              <p className="text-gray-600">Delhi</p>
+              <p className="text-indigo-600 font-semibold mt-2">
+                ₹5200 / night
+              </p>
+            </div>
+          </div>
+
         </div>
+
+
+
       </section>
 
-      {/* CTA SECTION */}
+      {/*---------------------------------------------------------------------CTA SECTION---------------------------------------------------------------------------------*/}
       <section className="bg-black text-white py-16 text-center">
         <motion.h2
           initial={{ opacity: 0 }}
