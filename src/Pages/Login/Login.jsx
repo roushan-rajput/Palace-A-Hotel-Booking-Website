@@ -32,16 +32,6 @@ const Login = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
 
-      {/* 🎥 Background Video */}
-      {/* <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src={src/assets/Lvideo1.mp4}
-        autoPlay
-        loop
-        muted
-        playsInline
-      /> */}
-
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={loginVideo}
@@ -60,7 +50,7 @@ const Login = () => {
 
           {/* Heading */}
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-3">
-            Admin Login
+            Login Here!!
           </h1>
           <p className="text-center text-gray-600 mb-5">
             Welcome back! Please login to your account
