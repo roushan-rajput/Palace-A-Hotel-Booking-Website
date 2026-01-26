@@ -26,7 +26,7 @@ const Login = () => {
     }
 
     alert("Login Successful ✅");
-    navigate("/about");
+    navigate("/Loginhome");
   };
 
   return (

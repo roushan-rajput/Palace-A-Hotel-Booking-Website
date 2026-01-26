@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../../Components/Navbar"
 
 const About = () => {
   return (
     <div className="w-full bg-white text-gray-800">
+      <Navbar/>
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative h-[80vh] flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945')] bg-cover bg-center">
@@ -64,6 +66,134 @@ const About = () => {
         </div>
       </section>
 
+
+      {/* ================= HAPPY CUSTOMERS ================= */}
+
+
+      {/* ====================== HAPPY GUESTS ====================== */}
+      <section className="bg-white py-32">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Heading */}
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Guests Who Trust Palace
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Every guest who stays with us leaves with memories, comfort, and a
+              promise to return. Here’s what some of them shared about their stay.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid lg:grid-cols-3 gap-12">
+
+            {/* Card 1 */}
+            <div className="group bg-gray-50 rounded-3xl p-10 border 
+                      hover:border-indigo-600 hover:bg-white 
+                      transition-all duration-300">
+              <div className="flex items-center gap-5 mb-6">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  className="w-20 h-20 rounded-full object-cover"
+                  alt="Vikas Sharma"
+                />
+                <div>
+                  <h4 className="text-xl font-semibold">Vikas Sharma</h4>
+                  <p className="text-sm text-gray-500">Jaipur, India</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 leading-relaxed mb-6">
+                I booked Palace Hotels for a family vacation and honestly didn’t expect
+                this level of comfort. The rooms were spacious, the staff was helpful,
+                and everything felt well managed. My parents loved it.
+              </p>
+
+              <div className="flex gap-1 text-yellow-400">
+                ★★★★★
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group bg-gray-50 rounded-3xl p-10 border 
+                      hover:border-indigo-600 hover:bg-white 
+                      transition-all duration-300">
+              <div className="flex items-center gap-5 mb-6">
+                <img
+                  src="https://randomuser.me/api/portraits/women/48.jpg"
+                  className="w-20 h-20 rounded-full object-cover"
+                  alt="Ananya Roy"
+                />
+                <div>
+                  <h4 className="text-xl font-semibold">Ananya Roy</h4>
+                  <p className="text-sm text-gray-500">Kolkata, India</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 leading-relaxed mb-6">
+                I travel frequently for work and Palace Hotels gave me a calm and
+                peaceful experience after long meetings. Clean rooms, good food,
+                and very professional staff. Worth every rupee.
+              </p>
+
+              <div className="flex gap-1 text-yellow-400">
+                ★★★★★
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group bg-gray-50 rounded-3xl p-10 border 
+                      hover:border-indigo-600 hover:bg-white 
+                      transition-all duration-300">
+              <div className="flex items-center gap-5 mb-6">
+                <img
+                  src="https://randomuser.me/api/portraits/men/71.jpg"
+                  className="w-20 h-20 rounded-full object-cover"
+                  alt="Rohit Malhotra"
+                />
+                <div>
+                  <h4 className="text-xl font-semibold">Rohit Malhotra</h4>
+                  <p className="text-sm text-gray-500">Chandigarh, India</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 leading-relaxed mb-6">
+                We booked Palace Hotels during my sister’s wedding. The arrangements,
+                staff coordination, and hospitality were excellent. Guests were really
+                impressed and so were we.
+              </p>
+
+              <div className="flex gap-1 text-yellow-400">
+                ★★★★☆
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Trust Bar */}
+          <div className="mt-24 bg-indigo-600 text-white rounded-3xl p-14 
+                    flex flex-col md:flex-row items-center justify-between gap-10">
+            <div>
+              <h3 className="text-3xl font-bold mb-3">
+                Trusted by Thousands of Guests
+              </h3>
+              <p className="text-indigo-100 max-w-xl">
+                From family vacations to business trips and special occasions,
+                Palace Hotels continues to be a preferred choice for comfort and luxury.
+              </p>
+            </div>
+
+            <button className="bg-white text-indigo-600 px-10 py-4 rounded-full 
+                         font-semibold hover:scale-105 transition">
+              Book Your Experience
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
       {/* ================= WHY CHOOSE US ================= */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
@@ -94,7 +224,7 @@ const About = () => {
       </section>
 
       {/* ================= HAPPY CUSTOMERS ================= */}
-      <section className="bg-gray-50 py-24">
+      {/* <section className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
             Happy Guests & Success Stories
@@ -124,7 +254,8 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
 
       {/* ================= CTA ================= */}
       <section className="relative bg-indigo-600 py-24 text-center">
