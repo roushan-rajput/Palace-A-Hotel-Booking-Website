@@ -55,7 +55,7 @@ const Signup = () => {
       />
 
       {/* 🌑 Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/10"></div>
 
       {/* 📄 Signup Card */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
@@ -63,7 +63,7 @@ const Signup = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="w-full max-w-md rounded-2xl bg-white/0 backdrop-blur-xl shadow-2xl p-8 border border-white/30"
+          className="w-full max-w-md rounded-2xl backdrop-blur-xl shadow-2xl p-6 border border-black/100"
 
         >
           <h2 className="text-3xl font-bold text-center text-gray-1000">
@@ -123,7 +123,7 @@ const Signup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="w-full rounded-xl bg-yellow-400 py-3 font-semibold text-black hover:bg-black transition"
+              className="w-full rounded-xl bg-yellow-300 py-3 font-semibold text-black hover:bg-black hover:text-yellow-300 transition-colors duration-300"
             >
               Sign Up
             </motion.button>
@@ -133,7 +133,7 @@ const Signup = () => {
             Already have an account?{" "}
             <Link
               to="/login"
-              className="font-semibold text-indigo-600 hover:underline"
+              className="font-semibold text-yellow-600 hover:underline"
             >
               Login
             </Link>

@@ -92,7 +92,7 @@ const Login = () => {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-black transition"
+              className="w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-black hover:text-yellow-400 transition-colors duration-300"
             >
               Login
             </button>

@@ -91,7 +91,7 @@ export default function Contact() {
 
           {[
             { title: "Palace Address", desc: "Royal Palace Road, Udaipur, Rajasthan" },
-            { title: "Call Us", desc: "+91 98765 43210" },
+            { title: "Call Us", desc: "011 2553 2553" },
             { title: "Email Us", desc: "support@luxurypalace.com" },
           ].map((item, i) => (
             <motion.div

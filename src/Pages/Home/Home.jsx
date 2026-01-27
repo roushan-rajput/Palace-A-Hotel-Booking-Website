@@ -2,8 +2,6 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import Hvideo1 from "../../assets/Hvideo1.mp4"
 
-
-
 export default function Home() {
   return (
 
@@ -65,11 +63,11 @@ export default function Home() {
               className="w-full h-44 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold">Sea View Resort</h2>
-              <p className="text-gray-600">Goa</p>
-              <p className="text-indigo-600 font-semibold mt-2">
+              <h2 className="text-xl font-bold">Just a Peaceful Stay</h2>
+              <p className="text-gray-600">Manali</p>
+              {/* <p className="text-indigo-600 font-semibold mt-2">
                 ₹4500 / Night
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -82,11 +80,11 @@ export default function Home() {
               className="w-full h-44 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold">Mountain Palace</h2>
-              <p className="text-gray-600">Manali</p>
-              <p className="text-indigo-600 font-semibold mt-2">
+              <h2 className="text-xl font-bold">Sea View Resort</h2>
+              <p className="text-gray-600">Goa</p>
+              {/* <p className="text-indigo-600 font-semibold mt-2">
                 ₹3800 / night
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -99,27 +97,27 @@ export default function Home() {
               className="w-full h-44 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold">City Grand Hotel</h2>
-              <p className="text-gray-600">Delhi</p>
-              <p className="text-indigo-600 font-semibold mt-2">
+              <h2 className="text-xl font-bold">City Grand  Banquet</h2>
+              <p className="text-gray-600">Dehradun</p>
+              {/* <p className="text-indigo-600 font-semibold mt-2">
                 ₹8200 / night
-              </p>
+              </p> */}
             </div>
           </div>
           {/* CARD 4 */}
           <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
                   hover:scale-105 hover:shadow-2xl transition duration-300">
             <img
-              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+              src="https://www.pexels.com/video/people-passing-a-prayer-plate-with-a-candle-and-offerings-7685293/"
               alt="Hotel 3"
               className="w-full h-44 object-cover"
             />
             <div className="p-4">
               <h2 className="text-xl font-bold">Aditya Grand Hotel</h2>
-              <p className="text-gray-600">Dehradun</p>
-              <p className="text-indigo-600 font-semibold mt-2">
+              <p className="text-gray-600">Mumbai</p>
+              {/* <p className="text-indigo-600 font-semibold mt-2">
                 ₹5200 / night
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -202,7 +200,7 @@ export default function Home() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white p-8 rounded-xl shadow hover:-translate-y-2 transition bg-blue-200"
+              className="bg-white-200 p-8 rounded-xl shadow hover:-translate-y-2 transition bg-pink-200"
             >
               <h3 className="text-4xl font-bold text-indigo-600">{item.value}</h3>
               <p className="mt-2 text-gray-600">{item.label}</p>

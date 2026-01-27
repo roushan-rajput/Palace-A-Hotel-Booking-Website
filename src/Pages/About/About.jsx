@@ -1,280 +1,198 @@
-import React from "react";
 import Navbar from "../../Components/Navbar"
+import { motion } from "framer-motion"
 
-const About = () => {
+export default function About() {
   return (
-    <div className="w-full bg-white text-gray-800">
-      <Navbar/>
+    <div className="w-full bg-[#0b0b0b] text-white overflow-hidden">
+      <Navbar />
+      {/* ================= HERO ================= */}
+      <section className="relative min-h-[85vh] flex items-center justify-center text-center px-6">
+        <img
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+          className="absolute w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/60"></div>
-
-        <div className="relative z-10 text-center max-w-4xl px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
-            About Palace Hotels
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 max-w-3xl"
+        >
+          <h1 className="text-5xl font-extrabold mb-6">
+            Where Royalty Meets Reality
           </h1>
-          <p className="text-gray-200 text-lg md:text-xl animate-slideUp">
-            Where luxury meets comfort, and every stay becomes a royal memory.
+          <p className="text-gray-300 text-lg">
+            Our palace hotels are not just destinations — they are
+            stories of legacy, passion, and unforgettable experiences.
           </p>
-        </div>
+        </motion.div>
       </section>
 
-      {/* ================= STORY SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Journey of Excellence
-          </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Palace Hotels began with a vision to redefine luxury hospitality.
-            From a single property to multiple iconic destinations, our journey
-            has been driven by passion, dedication, and trust of our guests.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            Every corner of our hotels is designed to reflect elegance, comfort,
-            and unforgettable experiences.
-          </p>
-        </div>
+      {/* ================= SUCCESS STORY ================= */}
+      <section className="py-24 px-6 bg-gradient-to-b from-black to-[#111]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
-        <div className="overflow-hidden rounded-2xl shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
-            alt="Hotel Interior"
-            className="w-full h-full object-cover hover:scale-110 transition duration-700"
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Our Success Story
+            </h2>
+            <p className="text-gray-300 mb-4 leading-relaxed">
+              What began as a single heritage palace has now grown into
+              one of India’s most admired luxury hotel brands.
+              Our vision was simple — preserve royal architecture
+              while delivering world-class comfort.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              Over the years, we restored forgotten palaces,
+              transformed them into living experiences, and welcomed
+              guests from all corners of the world.
+            </p>
+          </motion.div>
+
+          <motion.img
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+            className="rounded-3xl shadow-2xl"
           />
         </div>
       </section>
 
-      {/* ================= STATS SECTION ================= */}
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "10+", label: "Years Experience" },
-            { value: "50K+", label: "Happy Guests" },
-            { value: "25+", label: "Luxury Hotels" },
-            { value: "100+", label: "Awards Won" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-xl shadow hover:-translate-y-2 transition"
-            >
-              <h3 className="text-4xl font-bold text-indigo-600">{item.value}</h3>
-              <p className="mt-2 text-gray-600">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      {/* ================= HAPPY CUSTOMERS ================= */}
-
-
-      {/* ====================== HAPPY GUESTS ====================== */}
-      <section className="bg-white py-32">
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Guests Who Trust Palace
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Every guest who stays with us leaves with memories, comfort, and a
-              promise to return. Here’s what some of them shared about their stay.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid lg:grid-cols-3 gap-12">
-
-            {/* Card 1 */}
-            <div className="group bg-gray-50 rounded-3xl p-10 border 
-                      hover:border-indigo-600 hover:bg-white 
-                      transition-all duration-300">
-              <div className="flex items-center gap-5 mb-6">
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  className="w-20 h-20 rounded-full object-cover"
-                  alt="Vikas Sharma"
-                />
-                <div>
-                  <h4 className="text-xl font-semibold">Vikas Sharma</h4>
-                  <p className="text-sm text-gray-500">Jaipur, India</p>
-                </div>
-              </div>
-
-              <p className="text-gray-600 leading-relaxed mb-6">
-                I booked Palace Hotels for a family vacation and honestly didn’t expect
-                this level of comfort. The rooms were spacious, the staff was helpful,
-                and everything felt well managed. My parents loved it.
-              </p>
-
-              <div className="flex gap-1 text-yellow-400">
-                ★★★★★
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group bg-gray-50 rounded-3xl p-10 border 
-                      hover:border-indigo-600 hover:bg-white 
-                      transition-all duration-300">
-              <div className="flex items-center gap-5 mb-6">
-                <img
-                  src="https://randomuser.me/api/portraits/women/48.jpg"
-                  className="w-20 h-20 rounded-full object-cover"
-                  alt="Ananya Roy"
-                />
-                <div>
-                  <h4 className="text-xl font-semibold">Ananya Roy</h4>
-                  <p className="text-sm text-gray-500">Kolkata, India</p>
-                </div>
-              </div>
-
-              <p className="text-gray-600 leading-relaxed mb-6">
-                I travel frequently for work and Palace Hotels gave me a calm and
-                peaceful experience after long meetings. Clean rooms, good food,
-                and very professional staff. Worth every rupee.
-              </p>
-
-              <div className="flex gap-1 text-yellow-400">
-                ★★★★★
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group bg-gray-50 rounded-3xl p-10 border 
-                      hover:border-indigo-600 hover:bg-white 
-                      transition-all duration-300">
-              <div className="flex items-center gap-5 mb-6">
-                <img
-                  src="https://randomuser.me/api/portraits/men/71.jpg"
-                  className="w-20 h-20 rounded-full object-cover"
-                  alt="Rohit Malhotra"
-                />
-                <div>
-                  <h4 className="text-xl font-semibold">Rohit Malhotra</h4>
-                  <p className="text-sm text-gray-500">Chandigarh, India</p>
-                </div>
-              </div>
-
-              <p className="text-gray-600 leading-relaxed mb-6">
-                We booked Palace Hotels during my sister’s wedding. The arrangements,
-                staff coordination, and hospitality were excellent. Guests were really
-                impressed and so were we.
-              </p>
-
-              <div className="flex gap-1 text-yellow-400">
-                ★★★★☆
-              </div>
-            </div>
-
-          </div>
-
-          {/* Bottom Trust Bar */}
-          <div className="mt-24 bg-indigo-600 text-white rounded-3xl p-14 
-                    flex flex-col md:flex-row items-center justify-between gap-10">
-            <div>
-              <h3 className="text-3xl font-bold mb-3">
-                Trusted by Thousands of Guests
-              </h3>
-              <p className="text-indigo-100 max-w-xl">
-                From family vacations to business trips and special occasions,
-                Palace Hotels continues to be a preferred choice for comfort and luxury.
-              </p>
-            </div>
-
-            <button className="bg-white text-indigo-600 px-10 py-4 rounded-full 
-                         font-semibold hover:scale-105 transition">
-              Book Your Experience
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
-          Why Choose Palace Hotels
+      {/* ================= JOURNEY TIMELINE ================= */}
+      <section className="py-24 px-6 bg-black/80">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          Our Journey Through Time
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="max-w-5xl mx-auto space-y-12">
           {[
-            "Royal Luxury Rooms",
-            "World-Class Hospitality",
-            "Prime Locations",
-            "Premium Dining Experience",
-            "24/7 Guest Support",
-            "Unmatched Comfort",
-          ].map((text, i) => (
-            <div
+            { year: "2010", text: "First heritage palace restored and opened for guests." },
+            { year: "2014", text: "Expanded to luxury destinations across Rajasthan." },
+            { year: "2018", text: "Recognized as one of India’s finest palace stays." },
+            { year: "2023", text: "Serving over 1 lakh happy royal guests worldwide." },
+          ].map((item, i) => (
+            <motion.div
               key={i}
-              className="p-8 bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2 }}
+              className="flex gap-6 items-start"
             >
-              <h3 className="text-xl font-semibold mb-3">{text}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                We ensure every guest experiences the finest comfort, service,
-                and luxury during their stay with us.
+              <span className="text-pink-500 text-2xl font-bold">
+                {item.year}
+              </span>
+              <p className="text-gray-300">
+                {item.text}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* ================= HAPPY CUSTOMERS ================= */}
-      {/* <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
-            Happy Guests & Success Stories
-          </h2>
+      <section className="py-24 px-6 bg-gradient-to-b from-[#111] to-black">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          Happy Royal Guests
+        </h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {[
-              "https://randomuser.me/api/portraits/men/45.jpg",
-              "https://randomuser.me/api/portraits/women/56.jpg",
-              "https://randomuser.me/api/portraits/men/67.jpg",
-            ].map((img, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 rounded-2xl shadow hover:shadow-2xl transition"
-              >
-                <img
-                  src={img}
-                  alt="Guest"
-                  className="w-20 h-20 rounded-full object-cover mb-4"
-                />
-                <p className="text-gray-600 italic mb-3">
-                  “Palace Hotels gave us a truly royal experience. The service
-                  and ambience were exceptional.”
-                </p>
-                <h4 className="font-semibold">Satisfied Guest</h4>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            {
+              name: "Aarav Mehta",
+              quote: "Staying here felt like living inside history. Truly unforgettable.",
+              img: "https://randomuser.me/api/portraits/men/32.jpg"
+            },
+            {
+              name: "Nisha Kapoor",
+              quote: "Luxury, peace and elegance — every detail was perfect.",
+              img: "https://randomuser.me/api/portraits/women/44.jpg"
+            },
+            {
+              name: "Rohan Singh",
+              quote: "The hospitality made us feel like royalty from day one.",
+              img: "https://randomuser.me/api/portraits/men/65.jpg"
+            },
+          ].map((guest, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/10 p-6 rounded-2xl shadow-xl 
+              hover:scale-105 transition"
+            >
+              <img
+                src={guest.img}
+                className="w-16 h-16 rounded-full mb-4"
+              />
+              <p className="text-gray-300 italic mb-3">
+                “{guest.quote}”
+              </p>
+              <h4 className="font-semibold">
+                {guest.name}
+              </h4>
+            </motion.div>
+          ))}
         </div>
-      </section> */}
+      </section>
 
+      {/* ================= AWARDS ================= */}
+      <section className="py-24 px-6 bg-black/90">
+        <h2 className="text-4xl font-bold text-center mb-14">
+          Awards & Recognition
+        </h2>
 
-      {/* ================= CTA ================= */}
-      <section className="relative bg-indigo-600 py-24 text-center">
-        <div className="max-w-4xl mx-auto px-6 text-white">
-          <h2 className="text-4xl font-bold mb-6">
-            Experience Royal Hospitality
-          </h2>
-          <p className="text-indigo-100 mb-8">
-            Book your stay with Palace Hotels and create memories that last a
-            lifetime.
-          </p>
-          <button className="bg-white text-indigo-600 px-10 py-4 rounded-full font-semibold hover:scale-105 transition">
-            Book Now
-          </button>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+          {[
+            "Best Luxury Palace Hotel – India",
+            "Excellence in Heritage Hospitality",
+            "Top Royal Stay Experience Award"
+          ].map((award, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.2 }}
+              className="border border-white/20 p-8 rounded-2xl
+              hover:border-pink-500 transition"
+            >
+              <h3 className="text-lg font-semibold">
+                {award}
+              </h3>
+            </motion.div>
+          ))}
         </div>
+      </section>
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="py-24 text-center px-6 bg-gradient-to-t from-black to-[#111]">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-4xl font-bold mb-6"
+        >
+          Experience the Legacy Yourself
+        </motion.h2>
+        <p className="text-gray-300 max-w-xl mx-auto mb-8">
+          Come, be part of a story where luxury meets history
+          and every stay becomes a memory.
+        </p>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className="bg-pink-600 px-12 py-4 rounded-full 
+          font-semibold hover:bg-pink-700"
+        >
+          Book Royal Stay
+        </motion.button>
       </section>
 
     </div>
-  );
-};
-
-export default About;
+  )
+}
