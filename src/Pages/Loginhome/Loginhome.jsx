@@ -1,11 +1,12 @@
 import { motion } from "framer-motion"
-import Hvideo1 from "../../assets/Hvideo1.mp4"
-import Navbarlogin from "../../Components/Navbarlogin"
+// import Hvideo1 from "../../assets/Hvideo1.mp4"
+import Lvideo2 from "../../assets/Lvideo2.mp4"
+import Navbar from "../../Components/Navbar"
 
 export default function Dashboard() {
   return (
     <div className="w-full bg-[#ffffff] text-white overflow-hidden">
-      <Navbarlogin/>
+      <Navbar/>
 
       {/* ================= CINEMATIC HERO ================= */}
       <section className="relative h-screen flex items-center justify-center">
@@ -15,7 +16,7 @@ export default function Dashboard() {
           muted
           loop
           className="absolute inset-0 w-full h-full object-cover"
-          src={Hvideo1}
+          src={Lvideo2}
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -60,15 +61,15 @@ export default function Dashboard() {
         <div className="grid md:grid-cols-3 gap-12">
           {[
             {
-              title: "The Royal Rest",
+              title: "For Vacations!",
               img: "https://images.unsplash.com/photo-1566073771259-6a8506099945"
             },
             {
-              title: "The Grand Escape",
+              title: "The Grand Escape!",
               img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
             },
             {
-              title: "The Celebration Hall",
+              title: "The Peaceful Stay!",
               img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
             }
           ].map((item, i) => (

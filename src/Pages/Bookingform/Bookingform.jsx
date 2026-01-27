@@ -1,7 +1,12 @@
 import { motion } from "framer-motion"
+import { div } from "framer-motion/client"
+import { NavLink } from "react-router-dom"
+
 
 export default function BookingForm() {
+
   return (
+
     <div className="min-h-screen flex items-center justify-center 
       bg-gradient-to-br from-black via-gray-900 to-black px-4">
 
@@ -16,6 +21,11 @@ export default function BookingForm() {
         <h2 className="text-3xl font-bold text-center mb-6">
           Luxury Palace Booking
         </h2>
+        <NavLink to="/Loginhome"
+          className="bg-yellow-500 text-black px-4 py-1 rounded-lg"
+        >
+          Go Back....
+        </NavLink>
 
         {/* FORM */}
         <form className="space-y-4">

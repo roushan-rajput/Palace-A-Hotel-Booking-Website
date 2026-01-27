@@ -1,14 +1,14 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import Hvideo1 from "../../assets/Hvideo1.mp4"
-import Navbar from "../../Components/Navbar"
+
 
 
 export default function Home() {
   return (
-    
+
     <div className="w-full">
-      <Navbar />
+
 
 
       {/* HERO SECTION WITH VIDEO */}
@@ -42,41 +42,12 @@ export default function Home() {
             to="/signup"
             className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
-            Book it!!
+            Get Started!!
           </Link>
         </motion.div>
       </section>
 
-      {/*------------------------------------------------------SEARCH SECTION---------------------------------------------------------------- */}
-      <section className="bg-white py-122">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto bg-gray-100 p-6 rounded-2xl shadow-lg grid md:grid-cols-4 gap-4"
-        >
-          {/* <input type="text" placeholder="City" className="p-3 rounded-lg" /> */}
-          <select className="p-3 rounded-lg" id="" >
-            {/* <option >City</option> */}
-            <option value="">Delhi</option>
-            <option value="">Mumbai</option>
-            <option value="">Gao</option>
-            <option value="">Banglore</option>
-            <option value="">Pune</option>
-            <option value="">Bhopal</option>
-            <option value="">Jaipur</option>
-            <option value="">Udaipur</option>
-            <option value="">Chennai</option>
-            <option value="">Patna</option>
-            <option value="">Manali</option>
-          </select>
-          <input type="date" className="p-3 rounded-lg" />
-          <input type="date" className="p-3 rounded-lg" />
-          <button className="bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700">
-            Search
-          </button>
-        </motion.div>
-      </section>
+
 
       {/*------------------------------------------------FEATURED HOTELS --------------------------------------------------------*/}
       <section className="py-16 bg-gray-50">
@@ -154,27 +125,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= STATS ================= */}
-      <section className="py-20 bg-pink-600 text-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 text-center gap-10">
-          <div>
-            <h3 className="text-4xl font-bold">20+</h3>
-            <p className="mt-2">Luxury Palaces</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold">10K+</h3>
-            <p className="mt-2">Happy Guests</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold">100+</h3>
-            <p className="mt-2">Events Hosted</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold">24x7</h3>
-            <p className="mt-2">Support</p>
-          </div>
-        </div>
-      </section>
+
 
       {/* ================= LUXURY EXPERIENCE ================= */}
       <section className="py-20 bg-white">
@@ -211,13 +162,62 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* ================= STORY SECTION ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Our Journey of Excellence
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Palace Hotels began with a vision to redefine luxury hospitality.
+            From a single property to multiple iconic destinations, our journey
+            has been driven by passion, dedication, and trust of our guests.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Every corner of our hotels is designed to reflect elegance, comfort,
+            and unforgettable experiences.
+          </p>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+            alt="Hotel Interior"
+            className="w-full h-full object-cover hover:scale-110 transition duration-700"
+          />
+        </div>
+      </section>
+
+      {/* ================= STATS SECTION ================= */}
+      <section
+
+        className="bg-gray-100 py-20">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center ">
+          {[
+            { value: "10+", label: "Years Experience" },
+            { value: "50K+", label: "Happy Guests" },
+            { value: "25+", label: "Luxury Hotels" },
+            { value: "100+", label: "Awards Won" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white p-8 rounded-xl shadow hover:-translate-y-2 transition bg-red-100"
+            >
+              <h3 className="text-4xl font-bold text-indigo-600">{item.value}</h3>
+              <p className="mt-2 text-gray-600">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gray-10">
         <h2 className="text-3xl font-bold text-center mb-14">
           Why Choose Palace
         </h2>
 
-        <div className="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-24 ">
           {[
             ["Luxury Rooms", "Designed for royal comfort"],
             ["Prime Locations", "Heart of every city"],
@@ -232,12 +232,34 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-white p-8 rounded-2xl shadow-lg 
-                   hover:-translate-y-2 hover:shadow-2xl transition"
+                   hover:-translate-y-2 hover:shadow-2xl transition  bg-red-100"
             >
               <h3 className="text-xl font-semibold mb-3">{item[0]}</h3>
               <p className="text-gray-600">{item[1]}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* ================= STATS ================= */}
+      <section className="py-20 bg-pink-600 text-white">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 text-center gap-10">
+          <div>
+            <h3 className="text-4xl font-bold">20+</h3>
+            <p className="mt-2">Luxury Palaces</p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-bold">10K+</h3>
+            <p className="mt-2">Happy Guests</p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-bold">100+</h3>
+            <p className="mt-2">Events Hosted</p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-bold">24x7</h3>
+            <p className="mt-2">Support</p>
+          </div>
         </div>
       </section>
 
