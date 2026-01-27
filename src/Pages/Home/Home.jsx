@@ -40,7 +40,7 @@ export default function Home() {
 
           <Link
             to="/signup"
-            className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transition"
+            className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
             Get Started!!
           </Link>
@@ -202,7 +202,7 @@ export default function Home() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white p-8 rounded-xl shadow hover:-translate-y-2 transition bg-red-100"
+              className="bg-white p-8 rounded-xl shadow hover:-translate-y-2 transition bg-blue-200"
             >
               <h3 className="text-4xl font-bold text-indigo-600">{item.value}</h3>
               <p className="mt-2 text-gray-600">{item.label}</p>
@@ -231,11 +231,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-lg 
-                   hover:-translate-y-2 hover:shadow-2xl transition  bg-red-100"
+              className="bg-blue-200 p-8 rounded-3xl shadow-lg 
+                   hover:-translate-y-2 hover:shadow-2xl transition  bg-blue-200"
             >
               <h3 className="text-xl font-semibold mb-3">{item[0]}</h3>
-              <p className="text-gray-600">{item[1]}</p>
+              <p className="text-gray-800">{item[1]}</p>
             </motion.div>
           ))}
         </div>

@@ -123,7 +123,7 @@ const Signup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="w-full rounded-xl bg-indigo-600 py-3 font-semibold text-white hover:bg-indigo-700 transition"
+              className="w-full rounded-xl bg-yellow-400 py-3 font-semibold text-black hover:bg-black transition"
             >
               Sign Up
             </motion.button>

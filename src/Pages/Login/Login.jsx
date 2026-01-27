@@ -25,7 +25,7 @@ const Login = () => {
       return;
     }
 
-    alert("Login Successful ✅");
+    // alert("Login Successful ✅");
     navigate("/Loginhome");
   };
 
@@ -92,7 +92,7 @@ const Login = () => {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="w-full bg-yellow-400 text-black py-2 rounded-lg font-semibold hover:bg-black transition"
             >
               Login
             </button>
