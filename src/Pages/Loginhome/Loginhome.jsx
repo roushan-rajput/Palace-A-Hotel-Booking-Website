@@ -1,12 +1,13 @@
 import { motion } from "framer-motion"
-// import Hvideo1 from "../../assets/Hvideo1.mp4"
 import Lvideo2 from "../../assets/Lvideo2.mp4"
-import Navbar from "../../Components/Navbar"
+import Navbar from "../../Components/Staggeredmenu"
 
 export default function Dashboard() {
   return (
+    <>
+    <Navbar/>
     <div className="w-full bg-[#ffffff] text-white overflow-hidden">
-      <Navbar/>
+     
 
       {/* ================= CINEMATIC HERO ================= */}
       <section className="relative h-screen flex items-center justify-center">
@@ -146,5 +147,6 @@ export default function Dashboard() {
       </section>
 
     </div>
+    </>
   )
 }

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Navbar from "./Components/Navbar"
+import Navbar from "./Components/Staggeredmenu"
 
 
 import Home from "./Pages/Home/Home"

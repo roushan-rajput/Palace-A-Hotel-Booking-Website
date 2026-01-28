@@ -1,6 +1,11 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import Hvideo1 from "../../assets/Hvideo1.mp4"
+import fh from "../../assets/fh.mp4"
+import b from "../../assets/b.mp4"
+import r from "../../assets/r.mp4"
+import v from "../../assets/v.mp4"
+
 
 export default function Home() {
   return (
@@ -56,14 +61,20 @@ export default function Home() {
 
           {/* CARD 1 */}
           <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
-                  hover:scale-105 hover:shadow-2xl transition duration-300">
-            <img
-              src="src/assets/h1.jpg"
-              alt="Hotel 1"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold">Just a Peaceful Stay</h2>
+                  hover:scale-105 hover:shadow-2xl relative transition duration-300">
+            <div>
+              <video
+                className="absolute bottom-20 left-0 h-full  object-cover"
+                src={fh}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </div>
+
+            <div className="p-4 relative top-[190px] z-10">
+              <h2 className="text-xl font-bold">Peaceful Stay</h2>
               <p className="text-gray-600">Manali</p>
               {/* <p className="text-indigo-600 font-semibold mt-2">
                 ₹4500 / Night
@@ -73,13 +84,18 @@ export default function Home() {
 
           {/* CARD 2 */}
           <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
-                  hover:scale-105 hover:shadow-2xl transition duration-300">
-            <img
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
-              alt="Hotel 2"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-4">
+                  hover:scale-105 hover:shadow-2xl transition duration-300 relative">
+            <div>
+              <video
+                className="absolute bottom-20 left-0 h-full  object-cover"
+                src={r}
+                autoPlay
+                loop
+                muted
+                playsInline
+              /></div>
+
+            <div className="p-4 relative top-[190px] z-10">
               <h2 className="text-xl font-bold">Sea View Resort</h2>
               <p className="text-gray-600">Goa</p>
               {/* <p className="text-indigo-600 font-semibold mt-2">
@@ -90,34 +106,38 @@ export default function Home() {
 
           {/* CARD 3 */}
           <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
-                  hover:scale-105 hover:shadow-2xl transition duration-300">
-            <img
-              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
-              alt="Hotel 3"
-              className="w-full h-44 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold">City Grand  Banquet</h2>
+                  hover:scale-105 hover:shadow-2xl transition duration-300 relative">
+            <div>
+              <video
+                className="absolute bottom-20 left-0 h-full  object-cover"
+                src={b}
+                autoPlay
+                loop
+                muted
+                playsInline
+              /></div>
+            <div className="p-4 relative top-[190px] z-10">
+              <h2 className="text-xl font-bold">Grand  Banquet</h2>
               <p className="text-gray-600">Dehradun</p>
-              {/* <p className="text-indigo-600 font-semibold mt-2">
-                ₹8200 / night
-              </p> */}
+
             </div>
           </div>
           {/* CARD 4 */}
           <div className="w-72 bg-white rounded-xl shadow-lg overflow-hidden 
                   hover:scale-105 hover:shadow-2xl transition duration-300">
-            <img
-              src="https://www.pexels.com/video/people-passing-a-prayer-plate-with-a-candle-and-offerings-7685293/"
-              alt="Hotel 3"
+            <video
+              src={v}
               className="w-full h-44 object-cover"
-            />
+              autoPlay
+              loop
+              muted
+              playsInline>
+
+            </video>
             <div className="p-4">
-              <h2 className="text-xl font-bold">Aditya Grand Hotel</h2>
-              <p className="text-gray-600">Mumbai</p>
-              {/* <p className="text-indigo-600 font-semibold mt-2">
-                ₹5200 / night
-              </p> */}
+              <h2 className="text-xl font-bold">Let's Go On Trip</h2>
+              <p className="text-gray-600"><select name="City" id=" " ></select></p>
+
             </div>
           </div>
         </div>

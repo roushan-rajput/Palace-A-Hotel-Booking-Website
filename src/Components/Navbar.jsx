@@ -1,35 +1,39 @@
-import { NavLink } from "react-router-dom"
+import StaggeredMenu from '../Components/Staggeredmenu';
+import React from 'react'
 
-export default function Navbarlogin() {
-  return (
-    <nav className="bg-gray-900 text-white px-8 py-4 flex justify-between">
+const StaggeredMenu = () => {
+  const menuItems = [
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/Loginhome' },
+  { label: 'About', ariaLabel: 'Learn about us', link: '/About' },
+  { label: 'Services', ariaLabel: 'View our services', link: '/services' },
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/Contact' }
+];
 
-      <div className="flex gap-6">
-        <NavLink to="/Loginhome">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/Bookingform">Book Rooms</NavLink>
-        <NavLink to="">My Bookings</NavLink>
-      </div>
+const socialItems = [
+  { label: 'Twitter', link: 'https://twitter.com' },
+  { label: 'GitHub', link: 'https://github.com' },
+  { label: 'LinkedIn', link: 'https://linkedin.com' }
+];
 
-      <div className="flex gap-4">
+<div style={{ height: '100vh', background: '#1a1a1a' }}>
+  <StaggeredMenu
+    position="right"
+    items={menuItems}
+    socialItems={socialItems}
+    displaySocials
+    displayItemNumbering={true}
+    menuButtonColor="#ffffff"
+    openMenuButtonColor="#fff"
+    changeMenuColorOnOpen={true}
+    colors={['#B19EEF', '#5227FF']}
+    logoUrl="/path-to-your-logo.svg"
+    accentColor="#5227FF"
+    onMenuOpen={() => console.log('Menu opened')}
+    onMenuClose={() => console.log('Menu closed')}
+  />
+</div>
 
-
-        <div className="flex gap-4">
-          <NavLink to="" className="hover:text-yellow-400">
-            Profile
-          </NavLink>
-          <NavLink to="/"
-            className="bg-yellow-500 text-black px-4 py-1 rounded-lg"
-          >
-            Logout
-          </NavLink>
-        </div>
-
-
-
-      </div>
-
-    </nav>
-  )
 }
+
+export default StaggeredMenu
+

@@ -1,10 +1,11 @@
-import Navbar from "../../Components/Navbar"
+import StaggeredMenu from "../../Components/Staggeredmenu"
+// import Navbar from "../../Components/Staggeredmenu"
 import { motion } from "framer-motion"
 
 export default function About() {
   return (
     <div className="w-full bg-[#0b0b0b] text-white overflow-hidden">
-      <Navbar />
+      <StaggeredMenu />
       {/* ================= HERO ================= */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-center px-6">
         <img

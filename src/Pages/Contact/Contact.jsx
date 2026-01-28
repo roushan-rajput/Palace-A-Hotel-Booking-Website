@@ -1,10 +1,10 @@
 import { motion } from "framer-motion"
-import Navbar from "../../Components/Navbar"
+import StaggeredMenu from "../../Components/StaggeredMenu"
 
 export default function Contact() {
   return (
     <div className="w-full bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      <Navbar/>
+      <StaggeredMenu />
       {/* ================= HERO SECTION ================= */}
       <section className="min-h-[70vh] flex items-center justify-center text-center px-6">
         <motion.div
