@@ -11,9 +11,6 @@ export default function Home() {
   return (
 
     <div className="w-full">
-
-
-
       {/* HERO SECTION WITH VIDEO */}
       <section className="relative min-h-screen overflow-hidden">
 
@@ -249,7 +246,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-blue-200 p-8 rounded-3xl shadow-lg 
+              className="bg-blue-00 p-8 rounded-3xl shadow-lg 
                    hover:-translate-y-2 hover:shadow-2xl transition  bg-blue-200"
             >
               <h3 className="text-xl font-semibold mb-3">{item[0]}</h3>

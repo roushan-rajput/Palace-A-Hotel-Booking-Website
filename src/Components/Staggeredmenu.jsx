@@ -1,13 +1,14 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+
 import { Link } from 'react-router-dom';
 
 const defaultItems = [
   { label: 'Home', link: '/Loginhome' },
   { label: 'About', link: '/About' },
   { label: 'Contact', link: '/Contact' },
-  { label: 'For Booking', link: '/Bookingform' },
-  { label: 'My Booking', link: '' },
+  { label: 'Book Now', link: '/Bookingform' },
+  { label: 'My Booking', link: '/Booking' },
   { label: 'Profile', link: '' },
   { label: 'Logout', link: '/Home' }
 ];
@@ -127,7 +128,7 @@ const StaggeredMenu = ({
               <Link
                 to={item.link}
                 onClick={closeMenu}
-                className="text-[1.5rem] font-bold uppercase tracking-tight text-black hover:text-[var(--accent)] transition"
+                className="text-[2rem] font-bold uppercase tracking-tight text-black hover:text-[var(--accent)] transition"
                 style={{ '--accent': accentColor }}
               >
                 {item.label}

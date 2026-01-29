@@ -10,6 +10,9 @@ import Signup from "./Pages/Signup/Signup"
 import Login from "./Pages/Login/Login"
 import Loginhome from "./Pages/Loginhome/Loginhome"
 import Bookingform from "./Pages/Bookingform/Bookingform"
+import Booking from "./Pages/Booking/Booking"
+
+
 
 
 export default function App() {
@@ -22,6 +25,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/Loginhome" element={<Loginhome />} />
         <Route path="/Bookingform" element={<Bookingform />} />
+        <Route path="/Booking" element={<Booking />} />
 
         {/* Auth Routes */}
         <Route path="/signup" element={<Signup />} />

@@ -1,0 +1,14 @@
+{
+  "bookings": [
+    {
+      "id": "1",
+      "name": "Aman Verma",
+      "email": "aman@gmail.com",
+      "mobile": "9123456780",
+      "city": "Delhi",
+      "checkin": "2026-02-15",
+      "checkout": "2026-02-18",
+      "persons": 3
+    }
+  ]
+}
