@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import StaggeredMenu from "../../Components/Staggeredmenu";
 
 const Booking = () => {
+  
   const [bookings, setBookings] = useState([]);
-
+  
   const FetchData = () => {
     axios
       .get("http://localhost:4000/bookings")
-      // 
-
-
-      
-      .then((res) => setBookings(res.data))
+      .then((res) => {
+        let Data = res.data;
+        let Finaldata = Data.filter((e) => {
+          return e.loggedemail === localStorage.getItem("email");
+        });
+        setBookings(Finaldata);
+      })
       .catch(() => console.log("Network issue"));
   };
+
 
   const DeleteBooking = (id) => {
     axios.delete(`http://localhost:4000/bookings/${id}`)

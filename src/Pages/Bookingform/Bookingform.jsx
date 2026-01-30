@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-export default function BookingForm() {
+export default function Bookingform() {
 
   const [formData, setFormData] = useState({
     name: "",
@@ -16,31 +16,35 @@ export default function BookingForm() {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    setFormData({ 
+      ...formData, 
+      [e.target.name]: e.target.value 
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:4000/bookings", formData)
-      .then(() => {
-        alert("🎉 Booking Successful!");
-        setFormData({
-          name: "",
-          email: "",
-          mobile: "",
-          city: "",
-          checkin: "",
-          checkout: "",
-          persons: ""
+    let valid = true;
+
+    if (formData.name.trim() === "") {
+      alert("Name is required");
+      valid = false;
+    }
+
+    if (valid) {
+      let api = "http://localhost:4000/bookings";
+      let loggedemail = localStorage.getItem("email");
+
+      axios
+        .post(api, { ...formData, loggedemail })
+        .then(() => {
+          alert("🎉 Booking Confirmed!!");
+        })
+        .catch(() => {
+          alert("❌ Booking Failed");
         });
-      })
-      .catch(() => {
-        alert("❌ Booking Failed");
-      });
+    }
   };
 
   return (
@@ -58,50 +62,79 @@ export default function BookingForm() {
           Luxury Palace Booking
         </h2>
 
-        <NavLink to="/Loginhome"
-          className="bg-yellow-500 text-black px-4 py-1 rounded-lg">
+        <NavLink 
+          to="/Loginhome"
+          className="bg-yellow-500 text-black px-4 py-1 rounded-lg"
+        >
           Go Back....
         </NavLink>
 
         <br /><br />
 
-        {/* FORM */}
         <form className="space-y-4" onSubmit={handleSubmit}>
 
-          <input name="name" value={formData.name}
+          <input
+            name="name"
+            value={formData.name}
             onChange={handleChange}
-            type="text" placeholder="Full Name"
-            className="w-full p-3 rounded-lg bg-black/40" />
+            type="text"
+            placeholder="Full Name"
+            className="w-full p-3 rounded-lg bg-black/40"
+          />
 
-          <input name="email" value={formData.email}
+          <input
+            name="email"
+            value={formData.email}
             onChange={handleChange}
-            type="email" placeholder="Email ID"
-            className="w-full p-3 rounded-lg bg-black/40" />
+            type="email"
+            placeholder="Email ID"
+            className="w-full p-3 rounded-lg bg-black/40"
+          />
 
-          <input name="mobile" value={formData.mobile}
+          <input
+            name="mobile"
+            value={formData.mobile}
             onChange={handleChange}
-            type="tel" placeholder="Mobile Number"
-            className="w-full p-3 rounded-lg bg-black/40" />
+            type="tel"
+            placeholder="Mobile Number"
+            className="w-full p-3 rounded-lg bg-black/40"
+          />
 
-          <input name="city" value={formData.city}
+          <input
+            name="city"
+            value={formData.city}
             onChange={handleChange}
-            type="text" placeholder="City"
-            className="w-full p-3 rounded-lg bg-black/40" />
+            type="text"
+            placeholder="City"
+            className="w-full p-3 rounded-lg bg-black/40"
+          />
 
           <div className="grid grid-cols-2 gap-4">
-            <input name="checkin" value={formData.checkin}
+            <input
+              name="checkin"
+              value={formData.checkin}
               onChange={handleChange}
-              type="date" className="p-3 rounded-lg bg-black/40" />
+              type="date"
+              className="p-3 rounded-lg bg-black/40"
+            />
 
-            <input name="checkout" value={formData.checkout}
+            <input
+              name="checkout"
+              value={formData.checkout}
               onChange={handleChange}
-              type="date" className="p-3 rounded-lg bg-black/40" />
+              type="date"
+              className="p-3 rounded-lg bg-black/40"
+            />
           </div>
 
-          <input name="persons" value={formData.persons}
+          <input
+            name="persons"
+            value={formData.persons}
             onChange={handleChange}
-            type="number" placeholder="No. of Persons"
-            className="w-full p-3 rounded-lg bg-black/40" />
+            type="number"
+            placeholder="No. of Persons"
+            className="w-full p-3 rounded-lg bg-black/40"
+          />
 
           <motion.button
             type="submit"
@@ -111,7 +144,6 @@ export default function BookingForm() {
           >
             Book Palace
           </motion.button>
-
 
         </form>
       </motion.div>
