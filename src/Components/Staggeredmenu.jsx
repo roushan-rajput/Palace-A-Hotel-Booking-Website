@@ -1,5 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import logo from '../Assets/Palace.png';
 
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ const defaultItems = [
   { label: 'Logout', link: '/Home' }
 ];
 
-const MENU_HEIGHT = '95vh';
+const MENU_HEIGHT = '94vh';
 
 const StaggeredMenu = ({
   position = 'right',
@@ -79,66 +80,84 @@ const StaggeredMenu = ({
     });
   }, [position]);
 
-  return (
-    <div className="sm-scope fixed inset-0 z-50 pointer-events-none">
-      {/* MENU BUTTON */}
-      <button
-        onClick={open ? closeMenu : openMenu}
-        className="absolute top-4 right-12 z-90 text-white font-bold pointer-events-auto"
-      >
-        {open ? 'Close' : 'Menu'}
-      </button>
-
-      {/* BACKGROUND LAYERS */}
-      <div
-        className="absolute right-0 z-10 pointer-events-none"
-        style={{
-          height: MENU_HEIGHT,
-          top: '53%',
-          transform: 'translateY(-50%)',
-          width: '280px'
-        }}
-      >
-        {['#B19EEF', accentColor].map((c, i) => (
-          <div
-            key={i}
-            ref={el => (layersRef.current[i] = el)}
-            className="absolute top-0 right-0 w-full h-full"
-            style={{ background: c }}
-          />
-        ))}
+return (
+    <header
+      className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
+      aria-label="Main navigation header"
+    >
+      <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
+        <img
+          src={logo}
+          alt="Logo"
+          className="sm-logo-img block h-55 w-55 object-contain"
+          draggable={false}
+          width={110}
+          height={24}
+        />
       </div>
 
-      {/* PANEL */}
-      <aside
-        ref={panelRef}
-        className="absolute right-0 bg-white z-20 pointer-events-auto"
-        style={{
-          height: MENU_HEIGHT,
-          top: '53%',
-          transform: 'translateY(-50%)',
-          width: '280px',
-          // height: MENU_HEIGHT,
-          padding: '1rem 1rem 1rem'
-        }}
-      >
-        <ul className="flex flex-col gap-1">
-          {items.map((item, i) => (
-            <li key={i}>
-              <Link
-                to={item.link}
-                onClick={closeMenu}
-                className="text-[2rem] font-bold uppercase tracking-tight text-black hover:text-[var(--accent)] transition"
-                style={{ '--accent': accentColor }}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </aside>
+      <div className="sm-scope fixed inset-0 z-50 pointer-events-none">
+        {/* MENU BUTTON */}
+        <button
+          onClick={open ? closeMenu : openMenu}
+          className="absolute top-4 right-12 z-90 text-white font-bold pointer-events-auto"
+        >
+          {open ? 'Close' : 'Menu'}
+        </button>
 
-      <style>{`
+        {/* BACKGROUND LAYERS */}
+        <div
+          className="absolute right-0 z-10 pointer-events-none"
+          style={{
+            height: MENU_HEIGHT,
+            top: '53%',
+            transform: 'translateY(-50%)',
+            width: '280px',
+            borderRadius: '1.5rem'
+          }}
+        >
+          {['#B19EEF', accentColor].map((c, i) => (
+            <div
+              key={i}
+              ref={el => (layersRef.current[i] = el)}
+              className="absolute top-0 right-0 w-full h-full"
+              style={{ background: c, borderRadius: '1.5rem' }}
+
+            />
+          ))}
+        </div>
+
+        {/* PANEL */}
+        <aside
+          ref={panelRef}
+          className="absolute right-0 bg-white z-20 pointer-events-auto"
+          style={{
+            height: MENU_HEIGHT,
+            top: '53%',
+            transform: 'translateY(-50%)',
+            width: '280px',
+            // height: MENU_HEIGHT,
+            padding: '1rem 1rem 1rem',
+            borderRadius: '1.5rem'
+          }}
+        >
+          <ul className="flex flex-col gap-1">
+            {items.map((item, i) => (
+              <li key={i}>
+                <Link
+                  to={item.link}
+                  onClick={closeMenu}
+                  className="text-[2rem] font-bold uppercase tracking-tight text-black hover:text-[var(--accent)] transition"
+                  style={{ '--accent': accentColor }}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        <style>{`
         .sm-scope { font-family: system-ui, sans-serif; }
 
         @media (max-width: 768px) {
@@ -149,8 +168,9 @@ const StaggeredMenu = ({
           }
         }
       `}</style>
-    </div>
+      </div>
+      
+    </header>
   );
-};
-
+}
 export default StaggeredMenu;
