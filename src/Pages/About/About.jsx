@@ -1,11 +1,24 @@
-import StaggeredMenu from "../../Components/Staggeredmenu"
-// import Navbar from "../../Components/Staggeredmenu"
 import { motion } from "framer-motion"
+import logo from '../../Assets/Palace.png';
 
 export default function About() {
   return (
     <div className="w-full bg-[#0b0b0b] text-white overflow-hidden">
-      <StaggeredMenu />
+      <header
+        className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
+        aria-label="Main navigation header"
+      >
+        <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
+          <img
+            src={logo}
+            alt="Logo"
+            className="sm-logo-img block h-55 w-55 object-contain"
+            draggable={false}
+            width={11}
+            height={24} 
+          />
+        </div>
+      </header>
       {/* ================= HERO ================= */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-center px-6">
         <img

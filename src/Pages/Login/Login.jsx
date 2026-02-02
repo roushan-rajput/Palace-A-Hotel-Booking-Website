@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginVideo from "../../assets/Lvideo1.mp4";
+import logo from '../../Assets/Palace.png';
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -31,6 +33,21 @@ const Login = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* <header
+        className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
+        aria-label="Main navigation header"
+      >
+        <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
+          <img
+            src={logo}
+            alt="Logo"
+            className="sm-logo-img block h-55 w-55 object-contain"
+            draggable={false}
+            width={110}
+            height={24}
+          />
+        </div>
+      </header> */}
 
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -99,6 +116,15 @@ const Login = () => {
           </form>
 
           {/* Footer */}
+          <p className="mt-2 text-center text-lg text-gray-600">
+            Let's create an account?{" "}
+            <Link
+              to="/signup"
+              className="font-semibold text-yellow-600 hover:underline"
+            >
+              Signup
+            </Link>
+          </p>
           <p className="text-center text-sm text-gray-700 mt-6">
             © 2026 Admin Panel. All rights reserved.
           </p>

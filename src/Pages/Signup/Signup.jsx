@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import signupVideo from "../../assets/Signup1.mp4";
+import logo from '../../Assets/Palace.png';
+
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -43,6 +45,21 @@ const Signup = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* <header
+        className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
+        aria-label="Main navigation header"
+      >
+        <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
+          <img
+            src={logo}
+            alt="Logo"
+            className="sm-logo-img block h-55 w-55 object-contain"
+            draggable={false}
+            width={110}
+            height={24}
+          />
+        </div>
+      </header> */}
 
       {/* 🎥 Background Video */}
       <video
@@ -123,13 +140,13 @@ const Signup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="w-full rounded-xl bg-yellow-300 py-3 font-semibold text-black hover:bg-black hover:text-yellow-300 transition-colors duration-300"
+              className="w-full rounded-xl bg-yellow-400 py-3 font-semibold text-black hover:bg-black hover:text-yellow-300 transition-colors duration-300"
             >
               Sign Up
             </motion.button>
           </form>
 
-          <p className="mt-6 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-lg text-gray-400">
             Already have an account?{" "}
             <Link
               to="/login"

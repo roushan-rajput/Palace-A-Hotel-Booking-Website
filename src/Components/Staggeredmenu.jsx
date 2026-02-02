@@ -14,7 +14,7 @@ const defaultItems = [
   { label: 'Logout', link: '/Home' }
 ];
 
-const MENU_HEIGHT = '94vh';
+const MENU_HEIGHT = '90vh';
 
 const StaggeredMenu = ({
   position = 'right',
