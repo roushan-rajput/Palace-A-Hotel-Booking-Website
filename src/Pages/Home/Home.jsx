@@ -6,7 +6,7 @@ import fh from "../../assets/fh.mp4"
 import b from "../../assets/b.mp4"
 import r from "../../assets/r.mp4"
 import v from "../../assets/v.mp4"
-import logo from '../../Assets/Palace.png';
+import logo from '../../assets/Palace.png';
 
 
 export default function Home() {
