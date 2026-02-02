@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import signupVideo from "../../assets/Signup1.mp4";
-import logo from '../../Assets/Palace.png';
+import logo from '../../assets/Palace.png';
 
 
 const Signup = () => {

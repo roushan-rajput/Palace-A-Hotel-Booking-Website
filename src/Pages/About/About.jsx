@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import logo from '../../Assets/Palace.png';
+import logo from '../../assets/Palace.png';
 
 export default function About() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginVideo from "../../assets/Lvideo1.mp4";
-import logo from '../../Assets/Palace.png';
+import logo from '../../assets/Palace.png';
 import { Link } from "react-router-dom";
 
 
