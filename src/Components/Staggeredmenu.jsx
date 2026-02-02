@@ -1,6 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import logo from '../Assets/Palace.png';
+import logo from '../assets/Palace.png';
 
 import { Link } from 'react-router-dom';
 
