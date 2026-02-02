@@ -39,7 +39,7 @@ export default function Home() {
           playsInline
         />
 
-        {/* OVERLAY */}
+      
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -92,9 +92,7 @@ export default function Home() {
               <div className="p-4 relative top-[190px] z-10">
                 <h2 className="text-xl font-bold">Peaceful Stay</h2>
                 <p className="text-gray-600">Manali</p>
-                {/* <p className="text-indigo-600 font-semibold mt-2">
-                ₹4500 / Night
-              </p> */}
+                
               </div>
             </NavLink>
 
@@ -116,9 +114,7 @@ export default function Home() {
               <div className="p-4 relative top-[190px] z-10">
                 <h2 className="text-xl font-bold">Sea View Resort</h2>
                 <p className="text-gray-600">Goa</p>
-                {/* <p className="text-indigo-600 font-semibold mt-2">
-                ₹3800 / night
-              </p> */}
+                
               </div>
             </NavLink>
           </div>
