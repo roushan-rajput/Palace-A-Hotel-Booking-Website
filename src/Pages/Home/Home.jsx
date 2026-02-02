@@ -39,7 +39,7 @@ export default function Home() {
           playsInline
         />
 
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* OVERLAY */}
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
