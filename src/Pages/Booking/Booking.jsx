@@ -27,8 +27,8 @@ const Booking = () => {
   };
 
   const FetchData = () => {
-    axios.get("http://127.0.0.1:8000/SnippetList/").then((res) => {        // for SQL Database
-      // axios.get("http://localhost:4000/bookings").then((res) => {         // for JSon database
+    // axios.get("http://127.0.0.1:8000/SnippetList/").then((res) => {        // for SQL Database
+      axios.get("http://localhost:4000/bookings").then((res) => {         // for JSon database
           
         const finalData = res.data.filter(
           (e) => e.loggedemail === localStorage.getItem("email")

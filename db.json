@@ -2,7 +2,7 @@
   "bookings": [
     {
       "name": "Bikash kumar",
-      "email": "Bk@gmailc.com",
+      "email": "B@gmailc.com",
       "mobile": "54621032",
       "city": "bhr",
       "checkin": "2026-02-05",
@@ -31,6 +31,17 @@
       "checkin": "2026-03-06",
       "checkout": "2026-03-13",
       "persons": "5",
+      "loggedemail": null
+    },
+    {
+      "id": "bc06",
+      "name": "rohit",
+      "email": "dfsdas@gmail.com",
+      "mobile": "8521479630",
+      "city": "goa",
+      "checkin": "2026-02-28",
+      "checkout": "2026-04-11",
+      "persons": "8",
       "loggedemail": null
     }
   ]
