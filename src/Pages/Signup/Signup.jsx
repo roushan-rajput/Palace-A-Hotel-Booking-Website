@@ -45,23 +45,7 @@ const Signup = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* <header
-        className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
-        aria-label="Main navigation header"
-      >
-        <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
-          <img
-            src={logo}
-            alt="Logo"
-            className="sm-logo-img block h-55 w-55 object-contain"
-            draggable={false}
-            width={110}
-            height={24}
-          />
-        </div>
-      </header> */}
-
-      {/* 🎥 Background Video */}
+      
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={signupVideo}

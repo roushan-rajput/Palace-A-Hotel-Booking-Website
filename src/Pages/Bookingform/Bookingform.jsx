@@ -33,7 +33,9 @@ export default function Bookingform() {
     }
 
     if (valid) {
-      let api = "http://localhost:4000/bookings";
+      // let api = "http://127.0.0.1:8000/SnippetList/";                      //for djnago SQL database
+      let api = "http://localhost:4000/bookings";                  // #for JSON Database
+      
       let loggedemail = localStorage.getItem("email");
 
       axios

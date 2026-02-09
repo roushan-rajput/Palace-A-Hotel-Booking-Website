@@ -27,9 +27,9 @@ const Booking = () => {
   };
 
   const FetchData = () => {
-    axios
-      .get("http://localhost:4000/bookings")
-      .then((res) => {
+    axios.get("http://127.0.0.1:8000/SnippetList/").then((res) => {        // for SQL Database
+      // axios.get("http://localhost:4000/bookings").then((res) => {         // for JSon database
+          
         const finalData = res.data.filter(
           (e) => e.loggedemail === localStorage.getItem("email")
         );
@@ -37,6 +37,7 @@ const Booking = () => {
       })
       .catch(() => console.log("Network issue"));
   };
+  console.log(bookings)
 
   useEffect(() => {
     FetchData();
@@ -46,7 +47,8 @@ const Booking = () => {
     e.preventDefault();
 
     axios
-      .put(`http://localhost:4000/bookings/${editId}`, formData)
+      .put(`http://localhost:4000/bookings/${editId}`, formData)        // for Dbjson Database
+      // .put(`http://127.0.0.1:8000/booking/${editId}/`, formData)            // for SQL Database
       .then((res) => {
         alert("🎉 Booking Updated Successfully!!");
 
@@ -62,7 +64,8 @@ const Booking = () => {
 
 const DeleteBooking = (id) => {
   axios
-    .delete(`http://localhost:4000/bookings/${id}`)
+    .delete(`http://localhost:4000/bookings/${id}`)      //for Dbjson DAta base
+    // .delete(`http://127.0.0.1:8000/booking/${id}/`)          // for SQL Database
     .then(() => {
       FetchData();
       alert("Booking Deleted Successfully 🗑️");
